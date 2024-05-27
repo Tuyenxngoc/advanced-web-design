@@ -1,0 +1,32 @@
+:root {
+  --primary-color: #1890ff;
+}
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+  height: 120px;
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo-container .logo {
+  height: 100%;
+  width: auto;
+}
+
+.footer {
+  background-color: var(--primary-color);
+  color: red;
+}
