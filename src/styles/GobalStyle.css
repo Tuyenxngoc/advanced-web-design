@@ -6,14 +6,19 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
+
+
+/* Start header */
 .header {
   height: 120px;
-  background-color: blue;
+  background-color: var(--primary-color);
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 
 .logo-container {
   height: 100%;
@@ -25,6 +30,17 @@
   height: 100%;
   width: auto;
 }
+/* End header */
+
+
+
+
+
+
+
+
+
+
 
 .footer {
   background-color: var(--primary-color);
