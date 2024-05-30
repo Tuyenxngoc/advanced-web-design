@@ -8,28 +8,62 @@
 
 
 
-
 /* Start header */
+
 .header {
-  height: 120px;
+  height: 100px;
   background-color: var(--primary-color);
   color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 0 50px;
 }
 
+.logo {
+  height: 100px;
+  margin-right: 10px;
+}
 
-.logo-container {
-  height: 100%;
+.action-container {
+  width: 230px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-.logo-container .logo {
-  height: 100%;
-  width: auto;
+.user{
+  cursor: pointer;
 }
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.notification {
+  font-size: 22px;
+  position: relative;
+  cursor: pointer;
+}
+
+.number-noti {
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  right: -25%;
+}
+
+.name {
+  padding-left: 10px;
+  padding-top: 2px;
+}
+
 /* End header */
 
 
