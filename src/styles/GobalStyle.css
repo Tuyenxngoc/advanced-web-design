@@ -4,6 +4,7 @@
 
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none !important;
 }
 
 /* Start header */
@@ -33,6 +34,7 @@
 
 .user {
   cursor: pointer;
+  position: relative;
 }
 
 .avatar {
@@ -63,6 +65,18 @@
   padding-left: 10px;
   padding-top: 2px;
 }
+.logout{
+  position: absolute;
+  left: 20%;
+  top: 112%;
+  color: #575757;
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
 
 /* End header */
 
