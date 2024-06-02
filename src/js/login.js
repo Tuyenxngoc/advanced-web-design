@@ -42,6 +42,9 @@ $('#login-form').submit(function (event) {
     });
 
     if (isValid) {
+        // Lưu trạng thái đăng nhập vào localStorage
+        localStorage.setItem('loggedIn', 'true');
+        // Chuyển hướng đến trang chính
         window.location.href = 'index.html';
     } else {
         var toastElement = new bootstrap.Toast(document.getElementById('loginToast'));
