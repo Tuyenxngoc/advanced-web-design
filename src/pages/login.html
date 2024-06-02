@@ -7,15 +7,15 @@
     <title>Login</title>
     <link rel="stylesheet" href="../styles/GobalStyle.css">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 </head>
 
 <body class="login-body">
-    <form class="login">
+    <form class="login" id="login-form">
         <h1>Đăng nhập</h1>
 
         <div class="txtdata">
-            <input type="text">
+            <input type="text" id="username">
             <span placeholder-text="Tài khoản"></span>
         </div>
 
@@ -29,7 +29,21 @@
         <input type="submit" class="loginBtn" value="Đăng nhập">
     </form>
 
+    <!-- Toast -->
+    <div class="toast-container position-fixed bottom-0 start-0 p-3" style="z-index: 11">
+        <div id="loginToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Đăng nhập thất bại</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Tên tài khoản hoặc mật khẩu chưa chính xác
+            </div>
+        </div>
+    </div>
 
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../js/login.js"></script>
 </body>
