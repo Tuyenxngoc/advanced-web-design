@@ -44,6 +44,7 @@ $('#login-form').submit(function (event) {
     if (isValid) {
         // Lưu trạng thái đăng nhập vào localStorage
         localStorage.setItem('loggedIn', 'true');
+        localStorage.setItem('username', username);
         // Chuyển hướng đến trang chính
         window.location.href = 'index.html';
     } else {
