@@ -26,15 +26,16 @@
 }
 
 .action-container {
-    width: 230px;
+    width: 300px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .user {
     cursor: pointer;
     position: relative;
+    width: 75%;
+    float: left;
 }
 
 .avatar {
@@ -47,6 +48,7 @@
     font-size: 22px;
     position: relative;
     cursor: pointer;
+    width: 25%;
 }
 
 .number-noti {
@@ -58,7 +60,7 @@
     background-color: red;
     position: absolute;
     top: 0;
-    right: -25%;
+    left: 20%;
 }
 
 .name {
@@ -67,7 +69,7 @@
 }
 .logout {
     position: absolute;
-    left: 20%;
+    left: 18%;
     top: 112%;
     color: #575757;
     width: 150px;
@@ -76,7 +78,6 @@
     background-color: aliceblue;
     border-radius: 5px;
 }
-
 
 /* End header */
 

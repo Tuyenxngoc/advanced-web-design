@@ -25,9 +25,9 @@ $('.iconss').on('click', function () {
 
 // Danh sách các tài khoản hợp lệ
 const validAccounts = [
-    { username: 'tuyen', password: 'abc123!@#' },
-    { username: 'tu', password: 'abc123!@#' },
-    { username: 'tuan', password: 'abc123!@#' },
+    { username: 'tuyen', password: 'abc123!@#', displayName: 'Doan co so CNTT' },
+    { username: 'tu', password: 'abc123!@#', displayName: 'Doan co so CNTT 1' },
+    { username: 'tuan', password: 'abc123!@#', displayName: 'Doan co so CNTT 2' },
 ];
 
 $('#login-form').submit(function (event) {
@@ -37,13 +37,14 @@ $('#login-form').submit(function (event) {
     var password = $('#passwordField').val();
 
     // Kiểm tra thông tin đăng nhập
-    var isValid = validAccounts.some(function (account) {
+    var currentUser = validAccounts.find(function (account) {
         return account.username === username && account.password === password;
     });
 
-    if (isValid) {
+    if (currentUser) {
         // Lưu trạng thái đăng nhập vào localStorage
         localStorage.setItem('loggedIn', 'true');
+        localStorage.setItem('username', currentUser.displayName);
         // Chuyển hướng đến trang chính
         window.location.href = 'index.html';
     } else {
