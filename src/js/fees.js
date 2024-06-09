@@ -2,6 +2,10 @@ $(document).ready(function () {
     // URL của tệp JSON
     const jsonUrl = '../data/fees.json';
 
+    function formatCurrency(value) {
+        return parseInt(value.replace(/\D/g, '')).toLocaleString('vi-VN') + '₫';
+    }
+
     // Hàm để lấy dữ liệu từ tệp JSON và thêm vào bảng
     $.getJSON(jsonUrl, function (data) {
         const rowsPerPage = 10;
@@ -27,7 +31,7 @@ $(document).ready(function () {
                     <th scope="row" class="key">${item.id}</th>
                     <td>${item.nguoiThu}</td>
                     <td>${item.noiDung}</td>
-                    <td class="text-primary">${item.tongThu}₫</td>
+                    <td class="text-primary">${formatCurrency(item.tongThu)}</td>
                     <td>${item.ngayThu}</td>
                     <td>
                         <div class="table-action">
@@ -71,6 +75,9 @@ $(document).ready(function () {
 
         function setupPagination(data, rowsPerPage) {
             $pagination.empty();
+            if (data.length === 0) {
+                return;
+            }
             const pageCount = Math.ceil(data.length / rowsPerPage);
 
             $pagination.append(
@@ -91,7 +98,7 @@ $(document).ready(function () {
                 if (currentPage > 1) {
                     currentPage--;
                     displayRows(data, rowsPerPage, currentPage);
-                    updatePaginationButtons();
+                    updatePaginationButtons(data.length);
                 }
             });
 
@@ -101,11 +108,11 @@ $(document).ready(function () {
                 if (currentPage < pageCount) {
                     currentPage++;
                     displayRows(data, rowsPerPage, currentPage);
-                    updatePaginationButtons();
+                    updatePaginationButtons(data.length);
                 }
             });
 
-            updatePaginationButtons();
+            updatePaginationButtons(data.length);
         }
 
         function paginationButton(page, data) {
@@ -117,17 +124,17 @@ $(document).ready(function () {
                 e.preventDefault();
                 currentPage = page;
                 displayRows(data, rowsPerPage, currentPage);
-                updatePaginationButtons();
+                updatePaginationButtons(data.length);
             });
 
             return $button;
         }
 
-        function updatePaginationButtons() {
+        function updatePaginationButtons(totalElements) {
             $('.page-item').removeClass('active');
             $(`#pagination .page-item:eq(${currentPage})`).addClass('active');
 
-            const pageCount = Math.ceil(data.length / rowsPerPage);
+            const pageCount = Math.ceil(totalElements / rowsPerPage);
 
             $('#prev-page').toggle(currentPage > 1);
             $('#next-page').toggle(currentPage < pageCount);
@@ -220,8 +227,28 @@ $(document).ready(function () {
             $('#addModal').modal('show');
         });
 
+        //Xử lý sự kiện lọc
+        $('#add-filter').on('click', function () {
+            $('#filter-box').hide();
+            currentPage = 1;
+
+            var filterBy = $('#filter-by').val();
+            var filterValue = $('#filter-value').val().trim();
+
+            if (filterValue) {
+                var filterData = data.filter(function (item) {
+                    return item[filterBy].includes(filterValue);
+                });
+                displayRows(filterData, rowsPerPage, currentPage);
+                setupPagination(filterData, rowsPerPage);
+            } else {
+                displayRows(data, rowsPerPage, currentPage);
+                setupPagination(data, rowsPerPage);
+            }
+        });
+
         // Xử lý sự kiện export file
-        $('#excel-export').on('click', function () {
+        $('#export-btn').on('click', function () {
             var newData = [];
             var headers = ['ID', 'Người Thu', 'Nội Dung', 'Tổng Thu', 'Ngày Thu'];
             newData.push(headers);
