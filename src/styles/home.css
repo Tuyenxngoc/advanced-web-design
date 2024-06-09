@@ -1,0 +1,89 @@
+/* Start main */
+.greedy {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    border-radius: 2px;
+    border-left: 5px solid #093a95;
+}
+.nameDisplay {
+    font-weight: 600;
+}
+.navigate {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.satistical {
+    margin-top: 24px;
+    background-color: rgb(242, 245, 248);
+    padding: 10px;
+    height: 450px;
+}
+
+.satis-item {
+    height: 130px;
+    width: 30%;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 40px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+.common .icon {
+    height: 130px;
+    width: 130px;
+    font-size: 60px;
+    color: var(--primary-color);
+    border-radius: 5px;
+    background-color: rgba(31, 94, 208, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.satis-content {
+    height: 100%;
+    border-radius: 5px;
+    padding: 15px;
+}
+.title,
+.major {
+    color: rgb(161, 13, 13);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.satis-data,
+.satis-branch,
+.satis-number {
+    font-size: 20px;
+    font-weight: 550;
+}
+.satis-componets .icon {
+    height: 130px;
+    width: 130px;
+    font-size: 50px;
+    color: rgb(14, 174, 54);
+    border-radius: 5px;
+    background-color: rgba(34, 230, 83, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.note {
+    font-size: 16px;
+    font-style: italic;
+    margin-left: 4px;
+}
+.satis-branch {
+    font-size: 20px;
+}
+
+/* 
+
+
+
+
+
+
+ */
+/* End main */
