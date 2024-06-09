@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/GobalStyle.css">
+    <link rel="stylesheet" href="../styles/Fees.css">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="navbar"></div>
+
+    <main>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mt-2">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Library</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="management-section">
+                    <div class="col-12 mb-2">
+                        <div class="management-header">
+                            <h4>Quản lý đoàn phí</h4>
+                            <div>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#addModal">
+                                    Thêm mới
+                                </button>
+                                <button type="button" class="btn btn-light">
+                                    <img src="../assets/images/filters.svg" alt="filters">
+                                </button>
+                                <button type="button" class="btn btn-light">
+                                    Xuất excel
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="management-container">
+                            <table class="table" id="data-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" data-sort="id">
+                                            <span>STT</span>
+                                            <i class="fa fa-sort sort-icon"></i>
+                                        </th>
+                                        <th scope="col" data-sort="nguoiThu">
+                                            <span>Người thu</span>
+                                            <i class="fa fa-sort sort-icon"></i>
+                                        </th>
+                                        <th scope="col" data-sort="loaiThuPhi">
+                                            <span>Loại thu phí</span>
+                                            <i class="fa fa-sort sort-icon"></i>
+                                        </th>
+                                        <th scope="col" data-sort="noiDung">
+                                            <span>Nội dung</span>
+                                            <i class="fa fa-sort sort-icon"></i>
+                                        </th>
+                                        <th scope="col" data-sort="tongThu">
+                                            <span>Tổng thu</span>
+                                            <i class="fa fa-sort sort-icon"></i>
+                                        </th>
+                                        <th scope="col" data-sort="ngayThu">
+                                            <span>Ngày thu</span>
+                                            <i class="fa fa-sort sort-icon"></i>
+                                        </th>
+                                        <th scope="col">
+                                            <span>Thao tác</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Data rows will be inserted here via JavaScript -->
+                                </tbody>
+                            </table>
+
+                            <div class="pagination-section">
+                                <div class="pagination-info" id="pagination-info">Trang 1 trên 1</div>
+                                <div class="pagination-navigation">
+                                    <nav aria-label="Page navigation">
+                                        <ul class="pagination" id="pagination">
+                                            <!-- Pagination items will be inserted here via JavaScript -->
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="addModalLabel">Thu phí đoàn viên</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/fees.js"></script>
+</body>
+
+</html>

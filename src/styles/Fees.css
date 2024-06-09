@@ -1,0 +1,31 @@
+.management-section {
+    background-color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+}
+
+.management-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pagination-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pagination-info {
+}
+
+.pagination-navigation {
+}
+
+.sort-icon {
+    opacity: 0.2;
+}
+
+.sort-icon.active {
+    opacity: 1;
+}

@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "nguoiThu": "Mark",
+        "loaiThuPhi": "Otto",
+        "noiDung": "@mdo",
+        "tongThu": "Mark",
+        "ngayThu": "Otto",
+        "thaoTac": "@mdo"
+    },
+    {
+        "id": 2,
+        "nguoiThu": "Jacob",
+        "loaiThuPhi": "Thornton",
+        "noiDung": "@fat",
+        "tongThu": "Thornton",
+        "ngayThu": "Fat",
+        "thaoTac": "@fat"
+    },
+    {
+        "id": 3,
+        "nguoiThu": "Larry",
+        "loaiThuPhi": "Bird",
+        "noiDung": "@twitter",
+        "tongThu": "Bird",
+        "ngayThu": "Twitter",
+        "thaoTac": "@twitter"
+    }
+]

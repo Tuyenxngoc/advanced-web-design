@@ -4,14 +4,13 @@
 
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-decoration: none !important;
-    -moz-user-select: none !important;
-    -webkit-touch-callout: none!important;
-    -webkit-user-select: none!important;
-    -khtml-user-select: none!important;
-    -moz-user-select: none!important;
-    -ms-user-select: none!important;
-    user-select: none!important;
+}
+
+body {
+    background-color: #f1f1f1;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .centered-hr {
@@ -21,7 +20,6 @@
     background-color: rgba(121, 113, 113, 0.415);
     border-radius: 5px;
 }
-
 
 /* Start header */
 
@@ -98,9 +96,7 @@
 
 /* End header */
 
-
 /* Start nav */
-
 
 /* .nav-item .dropdown-menu {
 display: none;
@@ -130,7 +126,7 @@ border-radius: 0.25rem;
     margin: 0 20px;
 }
 
-.navItem>a::before {
+.navItem > a::before {
     content: '';
     height: 4px;
     width: 100%;
@@ -141,11 +137,11 @@ border-radius: 0.25rem;
     border-radius: 5px;
 }
 
-.navItem:hover>a::before {
+.navItem:hover > a::before {
     display: block;
 }
 
-.navItem:hover>a {
+.navItem:hover > a {
     color: #1f5ed0;
 }
 
@@ -166,14 +162,12 @@ border-radius: 0.25rem;
     color: white;
 }
 
-
 /* End nav */
 
 .footer {
     background-color: var(--primary-color);
     color: red;
 }
-
 
 /* Start Login */
 
@@ -244,11 +238,11 @@ border-radius: 0.25rem;
     bottom: -2px;
 }
 
-.focusClass+span::before {
+.focusClass + span::before {
     top: -9px;
 }
 
-.focusClass+span::after {
+.focusClass + span::after {
     width: 100%;
 }
 
@@ -279,9 +273,7 @@ border-radius: 0.25rem;
     left: 90%;
 }
 
-
 /* End Login */
-
 
 /* Members */
 
@@ -289,7 +281,6 @@ border-radius: 0.25rem;
     width: 100%;
     height: 40px;
 }
-
 
 /* #info {
 width: 90vw;
@@ -314,6 +305,5 @@ text-align: center;
 background-color: rgb(213, 41, 41);
 color: white;
 } */
-
 
 /*End Members */
