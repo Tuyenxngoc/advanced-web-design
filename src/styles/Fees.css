@@ -1,3 +1,21 @@
+@media (max-width: 576px) {
+    .management-header {
+        flex-direction: column;
+    }
+    .management-header > div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .pagination-section {
+        flex-direction: column;
+    }
+
+    .pagination-navigation {
+        margin-top: 16px;
+    }
+}
+
 .management-section {
     background-color: white;
     padding: 12px 24px;
@@ -19,11 +37,9 @@
 .pagination-info {
 }
 
-.pagination-navigation {
-}
-
 .sort-icon {
     opacity: 0.2;
+    cursor: pointer;
 }
 
 .sort-icon.active {

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quản lý đoàn phí</title>
 
     <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -23,25 +23,27 @@
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb mt-2">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Library</li>
+                            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Quản lý đoàn phí</li>
                         </ol>
                     </nav>
                 </div>
 
-                <div class="management-section">
+                <div class="management-section mb-4">
                     <div class="col-12 mb-2">
                         <div class="management-header">
-                            <h4>Quản lý đoàn phí</h4>
                             <div>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#addModal">
+                                <input class="form-control" id="search-input" placeholder="Tìm kiếm..." type="search"
+                                    title="Search within table" aria-controls="datatablesSimple">
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-primary" id="add-btn">
                                     Thêm mới
                                 </button>
                                 <button type="button" class="btn btn-light">
                                     <img src="../assets/images/filters.svg" alt="filters">
                                 </button>
-                                <button type="button" class="btn btn-light">
+                                <button type="button" class="btn btn-light" id="excel-export">
                                     Xuất excel
                                 </button>
                             </div>
@@ -49,42 +51,31 @@
                     </div>
                     <div class="col-12">
                         <div class="management-container">
-                            <table class="table" id="data-table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col" data-sort="id">
-                                            <span>STT</span>
-                                            <i class="fa fa-sort sort-icon"></i>
-                                        </th>
-                                        <th scope="col" data-sort="nguoiThu">
-                                            <span>Người thu</span>
-                                            <i class="fa fa-sort sort-icon"></i>
-                                        </th>
-                                        <th scope="col" data-sort="loaiThuPhi">
-                                            <span>Loại thu phí</span>
-                                            <i class="fa fa-sort sort-icon"></i>
-                                        </th>
-                                        <th scope="col" data-sort="noiDung">
-                                            <span>Nội dung</span>
-                                            <i class="fa fa-sort sort-icon"></i>
-                                        </th>
-                                        <th scope="col" data-sort="tongThu">
-                                            <span>Tổng thu</span>
-                                            <i class="fa fa-sort sort-icon"></i>
-                                        </th>
-                                        <th scope="col" data-sort="ngayThu">
-                                            <span>Ngày thu</span>
-                                            <i class="fa fa-sort sort-icon"></i>
-                                        </th>
-                                        <th scope="col">
-                                            <span>Thao tác</span>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!-- Data rows will be inserted here via JavaScript -->
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table" id="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" data-sort="id"> STT
+                                                <i class="fa fa-sort sort-icon"></i>
+                                            </th>
+                                            <th scope="col" data-sort="nguoiThu"> Người thu
+                                                <i class="fa fa-sort sort-icon"></i>
+                                            </th>
+                                            <th scope="col"> Nội dung </th>
+                                            <th scope="col" data-sort="tongThu"> Tổng thu
+                                                <i class="fa fa-sort sort-icon"></i>
+                                            </th>
+                                            <th scope="col" data-sort="ngayThu"> Ngày thu
+                                                <i class="fa fa-sort sort-icon"></i>
+                                            </th>
+                                            <th scope="col"> Thao tác </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Data rows will be inserted here via JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
 
                             <div class="pagination-section">
                                 <div class="pagination-info" id="pagination-info">Trang 1 trên 1</div>
@@ -105,9 +96,7 @@
         </div>
     </main>
 
-
-
-    <!-- Modal -->
+    <!-- Modal thêm, sửa -->
     <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -116,25 +105,64 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">Recipient:</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                    <form id="myForm" novalidate>
+                        <div class="form-group">
+                            <label for="collecter-name" class="col-form-label">Người thu:</label>
+                            <input type="text" class="form-control" id="collecter-name" required>
+                            <div class="invalid-feedback">Vui lòng nhập người thu.</div>
                         </div>
-                        <div class="mb-3">
-                            <label for="message-text" class="col-form-label">Message:</label>
-                            <textarea class="form-control" id="message-text"></textarea>
+
+                        <div class="form-group">
+                            <label for="total-amount" class="col-form-label">Tổng số tiền:</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="total-amount" required>
+                                <span class="input-group-text">₫</span>
+                                <div class="invalid-feedback">Vui lòng nhập tổng số tiền hợp lệ.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date" class="col-form-label">Ngày thu:</label>
+                            <input type="date" class="form-control" id="date" required>
+                            <div class="invalid-feedback">Vui lòng chọn ngày thu.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message-textarea" class="col-form-label">Nội dung:</label>
+                            <textarea class="form-control" id="message-textarea" required></textarea>
+                            <div class="invalid-feedback">Vui lòng nhập nội dung.</div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                    <button type="button" class="btn btn-primary">Lưu</button>
+                    <button type="button" class="btn btn-primary" id="save-btn">Lưu</button>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Modal xác nhận xóa -->
+    <div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteConfirmLabel">Xác nhận xóa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bạn có chắc chắn muốn xóa mục này?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteButton">Xóa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../node_modules/xlsx/dist/xlsx.full.min.js"></script>
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/main.js"></script>
