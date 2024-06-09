@@ -312,6 +312,7 @@ $(document).ready(function () {
                     // Add new item
                     data.push(formData);
 
+                    currentPage = 1;
                     //Xếp phần tử mới lên đầu
                     sortDirection = 'desc';
                     sortKey = 'id';
