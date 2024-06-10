@@ -1,0 +1,30 @@
+{
+    "major": [
+        { "id": "01", "name": "Công nghệ thông tin" },
+        { "id": "02", "name": "Hệ thống thông tin" },
+        { "id": "03", "name": "Kỹ thuật phần mềm" },
+        { "id": "04", "name": "Khoa học máy tính" },
+        { "id": "05", "name": "Công nghệ đa phương tiện" },
+        { "id": "06", "name": "An toàn thông tin" }
+    ],
+    "branch": [
+        { "id": "01", "idMajor": "01", "name": "CNTT01-K16" },
+        { "id": "02", "idMajor": "01", "name": "CNTT02-K16" },
+        { "id": "03", "idMajor": "01", "name": "CNTT03-K16" },
+        { "id": "04", "idMajor": "02", "name": "HTTT01-K16" },
+        { "id": "05", "idMajor": "02", "name": "HTTT02-K16" },
+        { "id": "06", "idMajor": "02", "name": "HTTT03-K16" },
+        { "id": "07", "idMajor": "03", "name": "KTPM01-K16" },
+        { "id": "08", "idMajor": "03", "name": "KTPM02-K16" },
+        { "id": "09", "idMajor": "03", "name": "KTPM03-K16" },
+        { "id": "10", "idMajor": "04", "name": "KHMT01-K16" },
+        { "id": "11", "idMajor": "04", "name": "KHMT02-K16" },
+        { "id": "12", "idMajor": "04", "name": "KHMT03-K16" },
+        { "id": "13", "idMajor": "05", "name": "CNDPT01-K16" },
+        { "id": "14", "idMajor": "05", "name": "CNDPT02-K16" },
+        { "id": "15", "idMajor": "05", "name": "CNDPT03-K16" },
+        { "id": "16", "idMajor": "06", "name": "ATTT01-K16" },
+        { "id": "17", "idMajor": "06", "name": "ATTT02-K16" },
+        { "id": "18", "idMajor": "06", "name": "ATTT03-K16" }
+    ]
+}
