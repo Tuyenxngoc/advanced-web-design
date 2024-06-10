@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Add Member</title>
+        <link rel="stylesheet" href="../styles/GobalStyle.css" />
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css" />
+        <link rel="stylesheet" href="../styles/addMember.css" />
+    </head>
+    <body>
+        <div id="header"></div>
+        <div id="navbar"></div>
+        <main class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mt-2">
+                                <li class="breadcrumb-item"><a href="index.html">Nghiệp vụ quản lý đoàn viên</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Kết nạp đoàn viên</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-9">
+                        <h4>Kết nạp đoàn viên</h4>
+                    </div>
+                    <div class="col-3">
+                        <button
+                            type="button"
+                            class="btn btn-success d-flex align-items-center"
+                            data-bs-toggle="modal"
+                            data-bs-target="#addModal"
+                        >
+                            <i class="fa-solid fa-upload"></i>
+                            <span style="margin-left: 5px">Import Excel</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row process mt-2">
+                    <div class="col-2 text-center">
+                        <div class="avt-change form-control">
+                            <label for="fileInput"
+                                ><img id="avatar" src="../assets/images/avt.png" alt="Avatar" />
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </label>
+                            <input type="file" id="fileInput" accept="image/*" />
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <form class="row pt-2">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder=" " id="indentify" />
+                                        <label for="indentify">Mã định danh</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder=" " id="fullname" />
+                                        <label for="fullname">Họ tên</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input type="date" class="form-control" placeholder=" " id="dob" />
+                                        <label for="dob">Ngày sinh</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select class="form-control form-select" id="gender">
+                                            <option value="male">Nam</option>
+                                            <option value="female">Nữ</option>
+                                        </select>
+                                        <label for="gender">Giới tính</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder=" " id="nation" />
+                                        <label for="nation">Dân tộc</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder=" " id="card-id" />
+                                        <label for="card-id">Căn cước công dân</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input type="date" class="form-control" placeholder=" " id="dated" />
+                                        <label for="dated">Ngày cấp</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder=" " id="issued-by" />
+                                        <label for="issued-by">Nơi cấp</label>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder=" " id="religion" />
+                                        <label for="religion">Tôn giáo</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder=" " id="eng-lvl" />
+                                        <label for="eng-lvl">Trình độ tiếng anh</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select class="form-control form-select" id="edu-lvl">
+                                            <option value="primary-sch">Tiểu học</option>
+                                            <option value="secondary-sch">Trung học cơ sở</option>
+                                            <option value="high-sch">Trung học phổ thông</option>
+                                        </select>
+                                        <label for="edu-lvl">Trình độ phổ thông</label>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select class="form-control form-select" id="qualification">
+                                            <option value="">Tiến sĩ</option>
+                                            <option value="">Thạc sĩ</option>
+                                            <option value="">Kỹ sư</option>
+                                            <option value="">Cử nhân</option>
+                                            <option value="">Cao đẳng</option>
+                                            <option value="">Trung cấp</option>
+                                            <option value="">Sơ cấp</option>
+                                        </select>
+                                        <label for="qualification">Trình độ chuyên môn</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select class="form-control form-select" id="political-theory">
+                                            <option value="">Sơ cấp</option>
+                                            <option value="">Trung cấp</option>
+                                            <option value="">Cao cấp</option>
+                                        </select>
+                                        <label for="political-theory">Lý luận chính trị</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select class="form-control form-select" id="provinceSelect1">
+                                            <option value="">Chọn tỉnh</option>
+                                        </select>
+                                        <label for="provinceSelect1">Quê quán( Tỉnh)</label>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select class="form-control form-select" id="districtSelect1">
+                                            <option value="">Chọn huyện</option>
+                                        </select>
+                                        <label for="districtSelect1">Quê quán( Huyện/ thành phố)</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select class="form-control form-select" id="communeSelect1">
+                                            <option value="">Chọn xã</option>
+                                        </select>
+                                        <label for="communeSelect1">Quê quán( Xã/ phường)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select class="form-control form-select" id="provinceSelect2">
+                                            <option value="">Chọn tỉnh</option>
+                                        </select>
+                                        <label for="provinceSelect2">Thường trú( Tỉnh)</label>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select class="form-control form-select" id="districtSelect2">
+                                            <option value="">Chọn huyện</option>
+                                        </select>
+                                        <label for="districtSelect2">Thường trú( Huyện/ thành phố)</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select class="form-control form-select" id="communeSelect2">
+                                            <option value="">Chọn xã</option>
+                                        </select>
+                                        <label for="communeSelect2">Thường trú( Xã/ phường)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select class="form-control form-select" id="majorSelect"></select>
+                                        <label for="majorSelect">Ngành</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select class="form-control form-select" id="branchSelect"></select>
+                                        <label for="branchSelect">Chi đoàn tiếp nhận</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder=" " id="cur-job" />
+                                        <label for="cur-job">Nghề nghiệp hiện nay</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Lý lịch và đơn xin vào đoàn
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck4" />
+                                        <label class="form-check-label" for="defaultCheck4">
+                                            Biên bản họp xét kết nạp của chi đoàn
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" />
+                                        <label class="form-check-label" for="defaultCheck2">
+                                            Giấy tờ đảm bảo thanh niên vào đoàn
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" />
+                                        <label class="form-check-label" for="defaultCheck3">
+                                            Giấy chứng nhận học lớp tình cảm đoàn
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="mt-3" />
+                            <div class="row">
+                                <div class="col-10"></div>
+                                <div class="col-2 mt-4">
+                                    <div class="btn btn-primary">
+                                        <i class="fa-solid fa-paper-plane" style="margin-right: 4px"></i
+                                        ><span>Phê duyệt</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Kết nạp từ file mẫu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="mdAdd">
+                        <caption>
+                            Danh sách kết nạp
+                        </caption>
+                        <table class="table table-bordered mt-2" style="width: 100%">
+                            <thead>
+                                <tr style="font-size: 11px">
+                                    <th>Mã định dánh</th>
+                                    <th>Họ tên</th>
+                                    <th>Ngày sinh</th>
+                                    <th>Giới tính</th>
+                                    <th>Dân tộc</th>
+                                    <th>Căn cước công dân</th>
+                                    <th>Trình độ phổ thông</th>
+                                    <th>Trình độ ngoại ngữ</th>
+                                    <th>Trình độ chuyên môn</th>
+                                    <th>Lý luận chính trị</th>
+                                    <th>Nghề nghiệp</th>
+                                    <th>Ngành</th>
+                                    <th>Chi đoàn</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="membersTableBody"></tbody>
+                        </table>
+
+                       
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                        <button type="button" class="btn btn-success" id="downloadButton">Tải file mẫu</button>
+                        <input type="file" id="uploadExcel" accept=".xlsx, .xls" style="display: none" />
+                        <button type="button" class="btn btn-info" id="uploadButton">Nhập Excel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/componentLoader.js"></script>
+        <script src="../js/addMember.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    </body>
+</html>
