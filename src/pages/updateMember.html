@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Info</title>
+
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../node_modules/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="../styles/GobalStyle.css">
+    <link rel="stylesheet" href="../styles/infoForm.css">
+
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="navbar"></div>
+    <div class="container mt-3">
+        <p class="mb-2">Thông tin / Cập nhật thông tin</p>
+        <div class="centered-hr container"></div>
+    </div>
+    <form action="" id="infoForm" class="container pt-2 mt-3 pb-3">
+        <div class="row">
+            <div class="col-2" align="center">
+                <img src="../assets/images/avatar.png" alt="avatar" id="avatar-preview" width="100%" height="200">
+                <div class="mt-3">
+                    <label for="avatar-input" class="btn btn-primary">Đổi avatar</label>
+                    <input type="file" id="avatar-input" style="display: none;">
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="row">
+                    <div class="col form-floating  mb-5">
+                        <select class="form-select" id="nameBox" aria-label="Floating label select example">
+                            <option value=""></option>
+                        </select>
+                        <label for="nameBox">Họ tên:</label>
+                    </div>
+                    <div class="col form-floating  mb-5">
+                        <select class="form-select" id="maDD" aria-label="Floating label select example"></select>
+                        <label for="maDD">Mã định danh:</label>
+                    </div>
+                    <div class="col form-floating  mb-5 ">
+                        <input type="date" class="form-control" id="ngaySinh">
+                        <label for="ngaySinh">Ngày sinh</label>
+                    </div>
+                    <div class="col form-floating  mb-5">
+                        <select class="form-select" id="gioiTinh" aria-label="Floating label select example">
+                          <option selected></option>
+                          <option value="Nam">Nam</option>
+                          <option value="Nữ">Nữ</option>
+                        </select>
+                        <label for="floatingSelect">Giới tính</label>
+                    </div>
+                    <div class="col form-floating  mb-5 ">
+                        <input type="text " class="form-control " id="danToc">
+                        <label for="floatingInput ">Dân tộc</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col form-floating  mb-5 ">
+                        <input type="text " class="form-control" id="CMND">
+                        <label for="floatingInput ">Chứng minh nhân dân</label>
+                    </div>
+                    <div class="col form-floating  mb-5 ">
+                        <input type="date" class="form-control " id="ngayCap">
+                        <label for="floatingInput ">Ngày cấp</label>
+                    </div>
+                    <div class="col form-floating  mb-5 ">
+                        <input type="text " class="form-control " id="noiCap">
+                        <label for="floatingInput ">Nơi cấp</label>
+                    </div>
+                    <div class="col form-floating  mb-5 ">
+                        <input type="text " class="form-control " id="tonGiao">
+                        <label for=" floatingInput ">Tôn giáo</label>
+                    </div>
+                    <div class="col form-floating  mb-5 ">
+                        <input type="text " class="form-control " id="tdPT">
+                        <label for=" floatingInput ">Trình độ phổ thông</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col form-floating  mb-5 ">
+                        <input type="text " class="form-control " id="tdCM">
+                        <label for="floatingInput ">Trình độ chuyên môn</label>
+                    </div>
+                    <div class="col form-floating  mb-5 ">
+                        <input type="text " class="form-control " id="llct">
+                        <label for="floatingInput ">Lý luận chính trị</label>
+                    </div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                </div>
+                <div class="row">
+                    <div class="col form-floating  mb-5 ">
+                        <input type="text " class="form-control " id="queT">
+                        <label for="floatingInput ">Quê quán (Tỉnh)</label>
+                    </div>
+                    <div class="col form-floating  mb-5 ">
+                        <input type="text " class="form-control " id="queH">
+                        <label for="floatingInput ">Quê quán (Huyện)</label>
+                    </div>
+                    <div class="col form-floating  mb-5 ">
+                        <input type="text " class="form-control " id="queX">
+                        <label for="floatingInput ">Quê quán (Xã/Phường)</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col form-floating  mb-5 ">
+                        <input type="text " class="form-control " id="truT">
+                        <label for="floatingInput ">Thường trú (Tỉnh)</label>
+                    </div>
+                    <div class="col form-floating  mb-5 ">
+                        <input type="text " class="form-control " id="truH">
+                        <label for="floatingInput ">Thường trú (Huyện)</label>
+                    </div>
+                    <div class="col form-floating  mb-5 ">
+                        <input type="text " class="form-control " id="truX">
+                        <label for="floatingInput ">Thường trú (Xã/Phường)</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col form-floating  mb-5">
+                        <select class="form-select" id="infoNganh" aria-label=" Floating label select example " class=" mem_nganh ">
+                            <option name=" optNganh " value="Ngành" selected>Ngành</option>
+                            <option name="optNganh " value="Hệ thống thông tin">Hệ thống thông tin</option>
+                            <option name="optNganh " value="Kỹ thuật phần mềm">Kỹ thuật phần mềm</option>
+                            <option name="optNganh " value="Công nghệ thông tin">Công nghệ thông tin</option>
+                            <option name="optNganh " value="Khoa học máy tính">Khoa học máy tính</option>
+                            <option name="optNganh " value="Công nghệ đa phương tiện">Công nghệ đa phương tiện</option>
+                            <option name="optNganh " value="An toàn thông tin">An toàn thông tin</option>
+                        </select>
+                        <label for="infoNganh">Ngành</label>
+                    </div>
+                    <div class="col form-floating mb-5 ">
+                        <input type="text " class="form-control " id="infoCD">
+                        <label for="infoCD ">Chi đoàn tiếp nhận</label>
+                    </div>
+                    <div class="col form-floating mb-5 ">
+                        <input type="text " class="form-control " id="ttnn">
+                        <label for="floatingInput ">Trình độ ngoại ngữ</label>
+                    </div>
+                    <div class="col form-floating mb-5 ">
+                        <input type="text " class="form-control " id="NgheNghiep">
+                        <label for="floatingInput ">Nghề nghiệp hiện nay</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col " align="center "><input type="submit " value="Cập nhật thông tin " class="btn btn-primary "></div>
+            </div>
+    </form>
+
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js "></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js "></script>
+    <script src="../../node_modules/swiper/swiper-bundle.js "></script>
+    <script src="../js/componentLoader.js "></script>
+    <script src="../js/home.js "></script>
+    <script src="../js/updateMember.js "></script>
+
+</body>
+
+</html>

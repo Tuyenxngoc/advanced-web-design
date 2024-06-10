@@ -1,6 +1,5 @@
 {
-    "members": [
-        {
+    "members": [{
             "id": "2021607789",
             "fullname": "Triệu Đăng Tuấn",
             "dob": "2003-03-18",
@@ -26,13 +25,14 @@
                 "district": "Vụ Bản",
                 "commune": "Hợp Hưng"
             },
-            "cur-job": "student",
+            "cur-job": "Sinh viên",
+            "position": "Bí thư Đoàn",
             "major": "Công nghệ thông tin",
             "branch": "CNTT07-K16"
         },
         {
             "id": "2021607790",
-            "fullname": "Nguyễn Văn A",
+            "fullname": "Nguyễn Văn B",
             "dob": "2002-01-01",
             "gender": "Nam",
             "nation": "Kinh",
@@ -56,13 +56,14 @@
                 "district": "Hoàn Kiếm",
                 "commune": "Hàng Bạc"
             },
-            "cur-job": "student",
+            "cur-job": "Sinh viên",
+            "position": "Phó bí thư Đoàn",
             "major": "Kỹ thuật phần mềm",
             "branch": "KTPM07-K16"
         },
         {
             "id": "2021607791",
-            "fullname": "Lê Thị B",
+            "fullname": "Lê Thị A",
             "dob": "2001-02-02",
             "gender": "Nữ",
             "nation": "Kinh",
@@ -86,7 +87,8 @@
                 "district": "Quận 1",
                 "commune": "Bến Nghé"
             },
-            "cur-job": "student",
+            "cur-job": "Sinh viên",
+            "position": "Ủy viên ban chấp hành Đoàn",
             "major": "Hệ thống thông tin",
             "branch": "HTTT01-K16"
         },
@@ -116,7 +118,8 @@
                 "district": "Hải Châu",
                 "commune": "Hòa Thuận Đông"
             },
-            "cur-job": "student",
+            "cur-job": "Sinh viên",
+            "position": "Ủy viên ban chấp hành Đoàn",
             "major": "Khoa học máy tính",
             "branch": "KHMT03-K16"
         },
@@ -146,7 +149,8 @@
                 "district": "Lê Chân",
                 "commune": "Dư Hàng"
             },
-            "cur-job": "student",
+            "cur-job": "Sinh viên",
+            "position": "Phó bí thư Đoàn",
             "major": "Công nghệ thông tin",
             "branch": "CNTT07-K16"
         },
@@ -176,7 +180,8 @@
                 "district": "Hạ Long",
                 "commune": "Hà Lầm"
             },
-            "cur-job": "student",
+            "cur-job": "Sinh viên",
+            "position": "Ủy viên ban chấp hành Đoàn",
             "major": "Khoa học máy tính",
             "branch": "HTTT03-K16"
         },
@@ -206,7 +211,8 @@
                 "district": "Thái Thụy",
                 "commune": "Thái Thượng"
             },
-            "cur-job": "student",
+            "cur-job": "Sinh viên",
+            "position": "Ủy viên ban chấp hành Đoàn",
             "major": "Hệ thống thông tin",
             "branch": "HTTT02-K16"
         },
@@ -236,7 +242,8 @@
                 "district": "Sầm Sơn",
                 "commune": "Quảng Tiến"
             },
-            "cur-job": "student",
+            "cur-job": "Sinh viên",
+            "position": "Phó bí thư Đoàn",
             "major": "Kỹ thuật phần mềm",
             "branch": "KTPM03-K16"
         },
@@ -266,7 +273,8 @@
                 "district": "Vinh",
                 "commune": "Hưng Đông"
             },
-            "cur-job": "student",
+            "cur-job": "Sinh viên",
+            "position": "Ủy viên ban chấp hành Đoàn",
             "major": "Công nghệ thông tin",
             "branch": "CNTT07-K16"
         },
@@ -296,7 +304,8 @@
                 "district": "Từ Sơn",
                 "commune": "Đình Bảng"
             },
-            "cur-job": "student",
+            "cur-job": "Sinh viên",
+            "position": "Bí thư Đoàn",
             "major": "Công nghệ thông tin",
             "branch": "CNTT08-K16"
         },
@@ -326,7 +335,8 @@
                 "district": "Việt Trì",
                 "commune": "Tiên Cát"
             },
-            "cur-job": "student",
+            "cur-job": "Sinh viên",
+            "position": "Ủy viên ban chấp hành Đoàn",
             "major": "Hệ thống thông tin",
             "branch": "HTTT02-K16"
         }

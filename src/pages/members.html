@@ -7,6 +7,7 @@
     <title>Members</title>
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/GobalStyle.css">
+    <link rel="stylesheet" href="../styles/members.css">
     <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
 </head>
 
@@ -75,74 +76,129 @@
                     <th scope="col">Chi đoàn</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row"></th>
-                    <td>Triệu Đăng Tuấn</td>
-                    <td>6694355</td>
-                    <td>09/04/2003</td>
-                    <td>Nữ</td>
-                    <td>Bắc Giang</td>
-                    <td>Bí thư Đoàn</td>
-                    <td>KHMT</td>
-                    <td>KHMT05</td>
-                </tr>
-                <tr>
-                    <th scope="row"></th>
-                    <td>Trịnh Ngọc Anh</td>
-                    <td>6694356</td>
-                    <td>21/05/2003</td>
-                    <td>Nam</td>
-                    <td>Việt Nam</td>
-                    <td>Bí thư Đoàn</td>
-                    <td>KTPM</td>
-                    <td>KTPM06</td>
-                </tr>
-                <tr>
-                    <th scope="row"></th>
-                    <td>Trịnh Ngọc Tuyến</td>
-                    <td>6694356</td>
-                    <td>21/05/2003</td>
-                    <td>Nam</td>
-                    <td>Việt Nam</td>
-                    <td>Ủy viên ban chấp hành Đoàn</td>
-                    <td>CNTT</td>
-                    <td>CNTT06</td>
-                </tr>
-                <tr>
-                    <th scope="row"></th>
-                    <td>Nguyễn Anh Tài</td>
-                    <td>6694354</td>
-                    <td>10/02/2003</td>
-                    <td>Nam</td>
-                    <td>Nông Trang, Việt Trì, Phú Thọ</td>
-                    <td>Phó bí thư Đoàn</td>
-                    <td>KHMT</td>
-                    <td>KHMT07</td>
-                </tr>
-                <tr>
-                    <th scope="row"></th>
-                    <td>Nguyễn Anh Tài</td>
-                    <td>6694354</td>
-                    <td>10/02/2003</td>
-                    <td>Nữ</td>
-                    <td>Nông Trang, Việt Trì, Phú Thọ</td>
-                    <td>Ủy viên ban chấp hành Đoàn</td>
-                    <td>KHMT</td>
-                    <td>KHMT07</td>
-                </tr>
-            </tbody>
+            <tbody></tbody>
         </table>
     </div>
     <div class="container bg-light info" id="info">
         <div class="Xout">
             <i class="fa-solid fa-xmark"></i>
         </div>
-    </div>
+        <form action="" id="infoForm" class="container pt-2 mt-3 pb-3">
+            <div class="row">
+                <div class="col-2" align="center">
+                    <img src="../assets/images/avatar.png" alt="avatar" id="avatar-preview" width="100%" height="200">
+                </div>
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col form-floating  mb-5 ">
+                            <input type="text" class="form-control" id="hoten" readonly>
+                            <label for="floatingInput ">Họ tên</label>
+                        </div>
+                        <div class="col form-floating  mb-5 ">
+                            <input type="text" class="form-control " id="maDD" readonly>
+                            <label for="floatingInput ">Mã định danh</label>
+                        </div>
+                        <div class="col form-floating  mb-5">
+                            <input type="text" class="form-control " id="ngaySinh" readonly>
+                            <label for="floatingInput ">Ngày sinh</label>
+                        </div>
+                        <div class="col form-floating  mb-5 ">
+                            <input type="text" class="form-control" id="gioiTinh" readonly>
+                            <label for="floatingInput ">Giới tính</label>
+                        </div>
+                        <div class="col form-floating  mb-5">
+                            <input type="text " class="form-control" id="danToc" readonly>
+                            <label for="floatingInput ">Dân tộc</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col form-floating  mb-5 ">
+                            <input type="text " class="form-control" id="CMND" readonly>
+                            <label for="floatingInput ">Chứng minh nhân dân</label>
+                        </div>
+                        <div class="col form-floating  mb-5 ">
+                            <input type="text" class="form-control" id="ngayCap" readonly>
+                            <label for="floatingInput ">Ngày cấp</label>
+                        </div>
+                        <div class="col form-floating  mb-5 ">
+                            <input type="text " class="form-control " id="noiCap" readonly>
+                            <label for="floatingInput ">Nơi cấp</label>
+                        </div>
+                        <div class="col form-floating  mb-5 ">
+                            <input type="text " class="form-control " id="tonGiao" readonly>
+                            <label for=" floatingInput ">Tôn giáo</label>
+                        </div>
+                        <div class="col form-floating  mb-5 ">
+                            <input type="text " class="form-control" id="tdPT" readonly>
+                            <label for=" floatingInput ">Trình độ Phổ thông</label>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col form-floating mb-5 ">
+                            <input type="text " class="form-control " id="tdCM" readonly>
+                            <label for="floatingInput ">Trình độ chuyên môn</label>
+                        </div>
+                        <div class="col form-floating mb-5 ">
+                            <input type="text " class="form-control" id="llct" readonly>
+                            <label for="floatingInput ">Lý luận chính trị</label>
+                        </div>
+                        <div class="col "></div>
+                        <div class="col "></div>
+                        <div class="col "></div>
+                    </div>
+                    <div class="row ">
+                        <div class="col form-floating mb-5 ">
+                            <input type="text " class="form-control" id="queT" readonly>
+                            <label for="floatingInput ">Quê quán (Tỉnh)</label>
+                        </div>
+                        <div class="col form-floating mb-5 ">
+                            <input type="text " class="form-control" id="queH" readonly>
+                            <label for="floatingInput ">Quê quán (Huyện)</label>
+                        </div>
+                        <div class="col form-floating mb-5 ">
+                            <input type="text " class="form-control" id="queX" readonly>
+                            <label for="floatingInput ">Quê quán (Xã/Phường)</label>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col form-floating mb-5 ">
+                            <input type="text " class="form-control " id="truT" readonly>
+                            <label for="floatingInput ">Thường trú (Tỉnh)</label>
+                        </div>
+                        <div class="col form-floating mb-5 ">
+                            <input type="text " class="form-control " id="truH" readonly>
+                            <label for="floatingInput ">Thường trú (Huyện)</label>
+                        </div>
+                        <div class="col form-floating mb-5 ">
+                            <input type="text " class="form-control " id="truX" readonly>
+                            <label for="floatingInput ">Thường trú (Xã/Phường)</label>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col form-floating mb-5 ">
+                            <input type="text " class="form-control" id="infoNganh" readonly>
+                            <label for="floatingInput ">Ngành</label>
+                        </div>
+                        <div class="col form-floating mb-5 ">
+                            <input type="text " class="form-control " id="infoCD" readonly>
+                            <label for="floatingInput ">Chi đoàn</label>
+                        </div>
+                        <div class="col form-floating mb-5 ">
+                            <input type="text " class="form-control" id="ttnn" readonly>
+                            <label for="floatingInput ">Trình độ ngoại ngữ</label>
+                        </div>
+                        <div class="col form-floating mb-5 ">
+                            <input type="text " class="form-control" id="NgheNghiep" readonly>
+                            <label for="floatingInput ">Nghề nghiệp hiện nay</label>
+                        </div>
+                    </div>
+                </div>
+        </form>
+        </div>
 
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/listMembers.js"></script>
+        <script src="../../node_modules/jquery/dist/jquery.min.js "></script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js "></script>
+        <script src="../js/listMembers.js "></script>
 </body>
 
 </html>
