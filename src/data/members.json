@@ -1,0 +1,334 @@
+{
+    "members": [
+        {
+            "id": "2021607789",
+            "fullname": "Triệu Đăng Tuấn",
+            "dob": "2003-03-18",
+            "gender": "Nam",
+            "nation": "Kinh",
+            "identification-card": {
+                "card-id": "036203014498",
+                "dated": "2021-03-18",
+                "issued-by": "",
+                "religion": ""
+            },
+            "edu-lvl": "Trung học phổ thông",
+            "eng-lvl": "IELTs 9.0",
+            "qualification": "",
+            "political-theory": "",
+            "address": {
+                "province": "Nam Định",
+                "district": "Vụ Bản",
+                "commune": "Hợp Hưng"
+            },
+            "permanent_address": {
+                "province": "Nam Định",
+                "district": "Vụ Bản",
+                "commune": "Hợp Hưng"
+            },
+            "cur-job": "student",
+            "major": "Công nghệ thông tin",
+            "branch": "CNTT07-K16"
+        },
+        {
+            "id": "2021607790",
+            "fullname": "Nguyễn Văn A",
+            "dob": "2002-01-01",
+            "gender": "Nam",
+            "nation": "Kinh",
+            "identification-card": {
+                "card-id": "036203014499",
+                "dated": "2021-01-01",
+                "issued-by": "",
+                "religion": ""
+            },
+            "edu-lvl": "Trung học phổ thông",
+            "eng-lvl": "IELTs 8.0",
+            "qualification": "",
+            "political-theory": "",
+            "address": {
+                "province": "Hà Nội",
+                "district": "Hoàn Kiếm",
+                "commune": "Hàng Bạc"
+            },
+            "permanent_address": {
+                "province": "Hà Nội",
+                "district": "Hoàn Kiếm",
+                "commune": "Hàng Bạc"
+            },
+            "cur-job": "student",
+            "major": "Kỹ thuật phần mềm",
+            "branch": "KTPM07-K16"
+        },
+        {
+            "id": "2021607791",
+            "fullname": "Lê Thị B",
+            "dob": "2001-02-02",
+            "gender": "Nữ",
+            "nation": "Kinh",
+            "identification-card": {
+                "card-id": "036203014500",
+                "dated": "2021-02-02",
+                "issued-by": "",
+                "religion": ""
+            },
+            "edu-lvl": "Trung học phổ thông",
+            "eng-lvl": "IELTs 7.5",
+            "qualification": "",
+            "political-theory": "",
+            "address": {
+                "province": "Hồ Chí Minh",
+                "district": "Quận 1",
+                "commune": "Bến Nghé"
+            },
+            "permanent_address": {
+                "province": "Hồ Chí Minh",
+                "district": "Quận 1",
+                "commune": "Bến Nghé"
+            },
+            "cur-job": "student",
+            "major": "Hệ thống thông tin",
+            "branch": "HTTT01-K16"
+        },
+        {
+            "id": "2021607792",
+            "fullname": "Phạm Văn C",
+            "dob": "2000-03-03",
+            "gender": "Nam",
+            "nation": "Kinh",
+            "identification-card": {
+                "card-id": "036203014501",
+                "dated": "2021-03-03",
+                "issued-by": "",
+                "religion": ""
+            },
+            "edu-lvl": "Trung học phổ thông",
+            "eng-lvl": "IELTs 7.0",
+            "qualification": "",
+            "political-theory": "",
+            "address": {
+                "province": "Đà Nẵng",
+                "district": "Hải Châu",
+                "commune": "Hòa Thuận Đông"
+            },
+            "permanent_address": {
+                "province": "Đà Nẵng",
+                "district": "Hải Châu",
+                "commune": "Hòa Thuận Đông"
+            },
+            "cur-job": "student",
+            "major": "Khoa học máy tính",
+            "branch": "KHMT03-K16"
+        },
+        {
+            "id": "2021607793",
+            "fullname": "Trần Thị D",
+            "dob": "1999-04-04",
+            "gender": "Nữ",
+            "nation": "Kinh",
+            "identification-card": {
+                "card-id": "036203014502",
+                "dated": "2021-04-04",
+                "issued-by": "",
+                "religion": ""
+            },
+            "edu-lvl": "Trung học phổ thông",
+            "eng-lvl": "IELTs 8.5",
+            "qualification": "",
+            "political-theory": "",
+            "address": {
+                "province": "Hải Phòng",
+                "district": "Lê Chân",
+                "commune": "Dư Hàng"
+            },
+            "permanent_address": {
+                "province": "Hải Phòng",
+                "district": "Lê Chân",
+                "commune": "Dư Hàng"
+            },
+            "cur-job": "student",
+            "major": "Công nghệ thông tin",
+            "branch": "CNTT07-K16"
+        },
+        {
+            "id": "2021607794",
+            "fullname": "Đỗ Văn E",
+            "dob": "1998-05-05",
+            "gender": "Nam",
+            "nation": "Kinh",
+            "identification-card": {
+                "card-id": "036203014503",
+                "dated": "2021-05-05",
+                "issued-by": "",
+                "religion": ""
+            },
+            "edu-lvl": "Trung học phổ thông",
+            "eng-lvl": "IELTs 7.0",
+            "qualification": "",
+            "political-theory": "",
+            "address": {
+                "province": "Quảng Ninh",
+                "district": "Hạ Long",
+                "commune": "Hà Lầm"
+            },
+            "permanent_address": {
+                "province": "Quảng Ninh",
+                "district": "Hạ Long",
+                "commune": "Hà Lầm"
+            },
+            "cur-job": "student",
+            "major": "Khoa học máy tính",
+            "branch": "HTTT03-K16"
+        },
+        {
+            "id": "2021607795",
+            "fullname": "Bùi Thị F",
+            "dob": "1997-06-06",
+            "gender": "Nữ",
+            "nation": "Kinh",
+            "identification-card": {
+                "card-id": "036203014504",
+                "dated": "2021-06-06",
+                "issued-by": "",
+                "religion": ""
+            },
+            "edu-lvl": "Trung học phổ thông",
+            "eng-lvl": "IELTs 8.0",
+            "qualification": "",
+            "political-theory": "",
+            "address": {
+                "province": "Thái Bình",
+                "district": "Thái Thụy",
+                "commune": "Thái Thượng"
+            },
+            "permanent_address": {
+                "province": "Thái Bình",
+                "district": "Thái Thụy",
+                "commune": "Thái Thượng"
+            },
+            "cur-job": "student",
+            "major": "Hệ thống thông tin",
+            "branch": "HTTT02-K16"
+        },
+        {
+            "id": "2021607796",
+            "fullname": "Ngô Văn G",
+            "dob": "1996-07-07",
+            "gender": "Nam",
+            "nation": "Kinh",
+            "identification-card": {
+                "card-id": "036203014505",
+                "dated": "2021-07-07",
+                "issued-by": "",
+                "religion": ""
+            },
+            "edu-lvl": "Trung học phổ thông",
+            "eng-lvl": "IELTs 7.5",
+            "qualification": "",
+            "political-theory": "",
+            "address": {
+                "province": "Thanh Hóa",
+                "district": "Sầm Sơn",
+                "commune": "Quảng Tiến"
+            },
+            "permanent_address": {
+                "province": "Thanh Hóa",
+                "district": "Sầm Sơn",
+                "commune": "Quảng Tiến"
+            },
+            "cur-job": "student",
+            "major": "Kỹ thuật phần mềm",
+            "branch": "KTPM03-K16"
+        },
+        {
+            "id": "2021607797",
+            "fullname": "Vũ Thị H",
+            "dob": "1995-08-08",
+            "gender": "Nữ",
+            "nation": "Kinh",
+            "identification-card": {
+                "card-id": "036203014506",
+                "dated": "2021-08-08",
+                "issued-by": "",
+                "religion": ""
+            },
+            "edu-lvl": "Trung học phổ thông",
+            "eng-lvl": "IELTs 8.0",
+            "qualification": "",
+            "political-theory": "",
+            "address": {
+                "province": "Nghệ An",
+                "district": "Vinh",
+                "commune": "Hưng Đông"
+            },
+            "permanent_address": {
+                "province": "Nghệ An",
+                "district": "Vinh",
+                "commune": "Hưng Đông"
+            },
+            "cur-job": "student",
+            "major": "Công nghệ thông tin",
+            "branch": "CNTT07-K16"
+        },
+        {
+            "id": "2021607798",
+            "fullname": "Lý Văn I",
+            "dob": "1994-09-09",
+            "gender": "Nam",
+            "nation": "Kinh",
+            "identification-card": {
+                "card-id": "036203014507",
+                "dated": "2021-09-09",
+                "issued-by": "",
+                "religion": ""
+            },
+            "edu-lvl": "Trung học phổ thông",
+            "eng-lvl": "IELTs 7.0",
+            "qualification": "",
+            "political-theory": "",
+            "address": {
+                "province": "Bắc Ninh",
+                "district": "Từ Sơn",
+                "commune": "Đình Bảng"
+            },
+            "permanent_address": {
+                "province": "Bắc Ninh",
+                "district": "Từ Sơn",
+                "commune": "Đình Bảng"
+            },
+            "cur-job": "student",
+            "major": "Công nghệ thông tin",
+            "branch": "CNTT08-K16"
+        },
+        {
+            "id": "2021607799",
+            "fullname": "Trịnh Thị J",
+            "dob": "1993-10-10",
+            "gender": "Nữ",
+            "nation": "Kinh",
+            "identification-card": {
+                "card-id": "036203014508",
+                "dated": "2021-10-10",
+                "issued-by": "",
+                "religion": ""
+            },
+            "edu-lvl": "Trung học phổ thông",
+            "eng-lvl": "IELTs 8.5",
+            "qualification": "",
+            "political-theory": "",
+            "address": {
+                "province": "Phú Thọ",
+                "district": "Việt Trì",
+                "commune": "Tiên Cát"
+            },
+            "permanent_address": {
+                "province": "Phú Thọ",
+                "district": "Việt Trì",
+                "commune": "Tiên Cát"
+            },
+            "cur-job": "student",
+            "major": "Hệ thống thông tin",
+            "branch": "HTTT02-K16"
+        }
+    ]
+}

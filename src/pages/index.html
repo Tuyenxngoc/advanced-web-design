@@ -7,18 +7,99 @@
     <title>Home</title>
 
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../node_modules/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="../styles/GobalStyle.css">
+    <link rel="stylesheet" href="../styles/home.css">   
     <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    
+   
 </head>
 
 <body>
 
     <div id="header"></div>
     <div id="navbar"></div>
+    <div class="container main">
+        <hr />
+        <div class="greedy text-white bg-primary">
+            Xin chào <span class="nameDisplay"></span>, chúc bạn có 1 ngày làm việc vui vẻ!
+        </div>
+        <div class="satistical">
+            <div class="navigate">
+                <h4>TRANG CHỦ</h4>
+            </div>
+            <div class=" common">
+                <div class="satis-item">
+                    <div class="icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <div class="satis-content">
+                        <div class="title">Tổng số</div>
+                        <div class="satis-data" id="satis-common">1200<span class="note">(đoàn viên)</span></div>                     
+                    </div>
+                </div>
+            </div>
+           <div class="swiper mySwiper">
+            <div class="swiper-wrapper  satis-componets">
+                <div class="satis-item swiper-slide">
+                    <div class="icon"><i class="fa-solid fa-users"></i></i></div>
+                    <div class="satis-content">
+                        <div class="major">Công nghệ thông tin</div>
+                        <div class="satis-branch">12<span class="note">(chi đoàn)</span></div>
+                        <div class="satis-number">300<span class="note">(đoàn viên)</span></div>                      
+                    </div>
+                </div>
+                <div class="satis-item swiper-slide">
+                    <div class="icon"><i class="fa-solid fa-users"></i></i></div>
+                    <div class="satis-content">
+                        <div class="major">Hệ thống thông tin</div>
+                        <div class="satis-branch">12<span class="note">(chi đoàn)</span></div>
+                        <div class="satis-number">300<span class="note">(đoàn viên)</span></div>                   
+                    </div>
+                </div>
+                <div class="satis-item swiper-slide">
+                    <div class="icon"><i class="fa-solid fa-users"></i></i></div>
+                    <div class="satis-content">
+                        <div class="major">Công nghệ đa phương tiện</div>
+                        <div class="satis-branch">12<span class="note">(chi đoàn)</span></div>
+                        <div class="satis-number">300<span class="note">(đoàn viên)</span></div>                   
+                    </div>
+                </div>
+                <div class="satis-item swiper-slide">
+                    <div class="icon"><i class="fa-solid fa-users"></i></i></div>
+                    <div class="satis-content">
+                        <div class="major">Kỹ thuật phần mềm</div>
+                        <div class="satis-branch">12<span class="note">(chi đoàn)</span></div>
+                        <div class="satis-number">300<span class="note">(đoàn viên)</span></div>                   
+                    </div>
+                </div>
+                <div class="satis-item swiper-slide">
+                    <div class="icon"><i class="fa-solid fa-users"></i></i></div>
+                    <div class="satis-content">
+                        <div class="major">An toàn thông tin</div>
+                        <div class="satis-branch">12<span class="note">(chi đoàn)</span></div>
+                        <div class="satis-number">300<span class="note">(đoàn viên)</span></div>                      
+                    </div>
+                </div>      
+                <div class="satis-item swiper-slide">
+                    <div class="icon"><i class="fa-solid fa-users"></i></i></div>
+                    <div class="satis-content">
+                        <div class="major">Khoa học máy tính</div>
+                        <div class="satis-branch">12<span class="note">(chi đoàn)</span></div>
+                        <div class="satis-number">300<span class="note">(đoàn viên)</span></div>                      
+                    </div>
+                </div>                
+            </div>
+          
+           </div>
+           <div class="swiper-pagination"></div>
+        </div>
+    </div>
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../../node_modules/swiper/swiper-bundle.js"></script>
+    <script src="../js/componentLoader.js"></script>
+    <script src="../js/home.js"></script>
     <script src="../js/checkLogin.js"></script>
+    
 </body>
 
 </html>

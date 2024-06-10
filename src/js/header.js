@@ -6,4 +6,13 @@ $(document).ready(function () {
     if (displayName) {
         $('#displayName').text(displayName);
     }
+
+    $(document).click(function (event) {
+        var $target = $(event.target);
+        var $logoutElement = $('#logout-id');
+
+        if (!$target.closest('#user-dropdown').length && $logoutElement.hasClass('show')) {
+            $logoutElement.collapse('hide');
+        }
+    });
 });

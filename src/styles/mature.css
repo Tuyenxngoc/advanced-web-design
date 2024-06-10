@@ -1,0 +1,61 @@
+.wrapper {
+    background-color: #f0f2f6;
+}
+.process {
+    background-color: #ffffff;
+    padding: 20px 10px 10px 10px;
+}
+.nav-mature .nav-link {
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+}
+.nav-link.active {
+    color: #1f5ed0 !important;
+    border-bottom: 2px solid #1f5ed0 !important;
+}
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.form-control {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-control:focus {
+    outline: none;
+    border-bottom: 2px solid #007bff;
+    box-shadow: none;
+}
+.form-control:focus ~ label,
+.form-control:not(:placeholder-shown) ~ label {
+    top: -0.75rem;
+    font-size: 0.75rem;
+    color: #007bff;
+}
+.form-group label {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.5rem;
+    font-size: 1rem;
+    color: #aaa;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    background: white;
+    padding: 0 0.25rem;
+}
+
+.mature-content label {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 10px;
+
+}
+.mature-content textarea {
+    width: 300px;
+    
+}
