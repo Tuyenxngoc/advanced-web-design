@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/GobalStyle.css">
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="navbar"></div>
+    <div class="container mt-3">
+        <p class="mb-2">Thông tin / Danh sách Đoàn viên</p>
+        <div class="centered-hr container"></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-2 pt-3">
+                <select name="" id="mem_nganh" class="mem_select">
+                    <option name="optNganh" value="">Ngành</option>
+                    <option name="optNganh" value="">Hệ thống thông tin</option>
+                    <option name="optNganh" value="">Kỹ thuật phần mềm</option>
+                    <option name="optNganh" value="">Công nghệ thông tin</option>
+                    <option name="optNganh" value="">Khoa học máy tính</option>
+                    <option name="optNganh" value="">Công nghệ đa phương tiện</option>
+                    <option name="optNganh" value="">An toàn thông tin</option>
+                </select>
+            </div>
+            <div class="col-2 pt-3">
+                <select name="" id="mem_chidoan" class="mem_select">
+                    <option value="">Chi đoàn</option>
+                    <option value="">Vui lòng chọn ngành học ...</option>
+                </select>
+            </div>
+            <div class="col-2 pt-3">
+                <select name="" id="mem_gioitinh" class="mem_select">
+                    <option value="">Giới tính</option>
+                    <option value="">Nam</option>
+                    <option value="">Nữ</option>
+                </select>
+            </div>
+            <div class="col-2 pt-3">
+                <select name="" id="mem_chucvu" class="mem_select">
+                    <option value="">Chức vụ</option>
+                    <option value="">Bí thư Đoàn</option>
+                    <option value="">Phó bí thư Đoàn</option>
+                    <option value="">Ủy viên ban chấp hành Đoàn</option>
+                </select>
+            </div>
+            <div class="col-3 pt-3">
+                <input type="text" name="" id="mem_name" placeholder="Nhập thông tin tìm kiếm ..." class="mem_select" style="padding: 15px;">
+            </div>
+            <div class="col-1 pt-3">
+                <button type="submit" class="mem_select btn btn-primary" id="btnSearch"><i class="fa-solid fa-magnifying-glass"></i> Tìm</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="pt-5">
+        <table class="table table-hover container" id="myTable">
+            <thead>
+                <tr>
+                    <th scope="col">STT</th>
+                    <th scope="col">Họ và tên</th>
+                    <th scope="col">Mã định danh</th>
+                    <th scope="col">Ngày sinh</th>
+                    <th scope="col">Giới tính</th>
+                    <th scope="col">Quê quán</th>
+                    <th scope="col">Chức vụ</th>
+                    <th scope="col">Ngành</th>
+                    <th scope="col">Chi đoàn</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"></th>
+                    <td>Triệu Đăng Tuấn</td>
+                    <td>6694355</td>
+                    <td>09/04/2003</td>
+                    <td>Nữ</td>
+                    <td>Bắc Giang</td>
+                    <td>Bí thư Đoàn</td>
+                    <td>KHMT</td>
+                    <td>KHMT05</td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td>Trịnh Ngọc Anh</td>
+                    <td>6694356</td>
+                    <td>21/05/2003</td>
+                    <td>Nam</td>
+                    <td>Việt Nam</td>
+                    <td>Bí thư Đoàn</td>
+                    <td>KTPM</td>
+                    <td>KTPM06</td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td>Trịnh Ngọc Tuyến</td>
+                    <td>6694356</td>
+                    <td>21/05/2003</td>
+                    <td>Nam</td>
+                    <td>Việt Nam</td>
+                    <td>Ủy viên ban chấp hành Đoàn</td>
+                    <td>CNTT</td>
+                    <td>CNTT06</td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td>Nguyễn Anh Tài</td>
+                    <td>6694354</td>
+                    <td>10/02/2003</td>
+                    <td>Nam</td>
+                    <td>Nông Trang, Việt Trì, Phú Thọ</td>
+                    <td>Phó bí thư Đoàn</td>
+                    <td>KHMT</td>
+                    <td>KHMT07</td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td>Nguyễn Anh Tài</td>
+                    <td>6694354</td>
+                    <td>10/02/2003</td>
+                    <td>Nữ</td>
+                    <td>Nông Trang, Việt Trì, Phú Thọ</td>
+                    <td>Ủy viên ban chấp hành Đoàn</td>
+                    <td>KHMT</td>
+                    <td>KHMT07</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container bg-light info" id="info">
+        <div class="Xout">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </div>
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/listMembers.js"></script>
+</body>
+
+</html>
