@@ -126,7 +126,6 @@ $(document).ready(function () {
                 const jsonData = XLSX.utils.sheet_to_json(firstSheet);
                 const membersTableBody = $('#membersTableBody');
                 jsonData.forEach((member) => {
-                    console.log(member);
                     membersTableBody.append(`
                         <tr style="font-size: 11px">
                             <td>${member.id}</td>

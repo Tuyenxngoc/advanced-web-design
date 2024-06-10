@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mature</title>
+        <link rel="stylesheet" href="../styles/GobalStyle.css" />
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css" />
+        <link rel="stylesheet" href="../styles/mature.css" />
+    </head>
+    <body>
+        <div id="header"></div>
+        <div id="navbar"></div>
+
+        <main class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mt-2">
+                                <li class="breadcrumb-item"><a href="index.html">Nghiệp vụ quản lý đoàn viên</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Trưởng thành đoàn</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-9">
+                        <h4>Trưởng thành đoàn</h4>
+                    </div>
+                </div>
+                <hr />
+                <div class="row process">
+                    <nav>
+                        <div class="nav nav-tabs row nav-mature" id="nav-tab" role="tablist">
+                            <button
+                                class="col nav-link active"
+                                id="nav-home-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-home"
+                                type="button"
+                                role="tab"
+                                aria-controls="nav-home"
+                                aria-selected="true"
+                            >
+                                Danh sách đoàn viên đủ tuổi trưởng thành
+                            </button>
+                            <button
+                                class="col nav-link"
+                                id="nav-profile-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-profile"
+                                type="button"
+                                role="tab"
+                                aria-controls="nav-profile"
+                                aria-selected="false"
+                            >
+                                Danh sách trưởng thành đoàn
+                            </button>
+                            <button
+                                class="col nav-link"
+                                id="nav-contact-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-contact"
+                                type="button"
+                                role="tab"
+                                aria-controls="nav-contact"
+                                aria-selected="false"
+                            >
+                                Danh sách tiếp tục sinh hoạt
+                            </button>
+                        </div>
+                    </nav>
+                    <div class="row p-3">
+                        <div class="col-8"></div>
+                        <div class="col-2">
+                            <button
+                                type="button"
+                                class="btn btn-success"
+                                data-bs-toggle="modal"
+                                data-bs-target="#matureModa"
+                                id="matureBtn"
+                            >
+                                <i class="fa-solid fa-paper-plane"></i
+                                ><span style="font-size: 14px; margin-left: 5px">Trưởng thành đoàn</span>
+                            </button>
+                        </div>
+                        <div class="col-2">
+                            <button type="button" class="btn btn-info text-white" id="continueBtn">
+                                <i class="fa-solid fa-paper-plane"></i
+                                ><span style="font-size: 14px; margin-left: 5px">Tiếp tục sinh hoạt</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div
+                            class="tab-pane fade show active"
+                            id="nav-home"
+                            role="tabpanel"
+                            aria-labelledby="nav-home-tab"
+                        >
+                            <table class="table table-bordered table-striped table-hover">
+                                <thead class="text-center">
+                                    <th></th>
+                                    <th>Mã định danh</th>
+                                    <th>Họ và tên</th>
+                                    <th>Ngày sinh</th>
+                                    <th>Ngày vào đoàn</th>
+                                    <th>Chức vụ</th>
+                                </thead>
+                                <tbody id="member-mature"></tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            ...
+                        </div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            ...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="modal fade" id="matureModa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Trưởng thành đoàn</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body row">
+                        <div class="col-2">
+                            <div class="row">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder=" " id="religion" />
+                                    <label for="religion">Nhập số QĐ</label>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="form-group">
+                                    <input type="date" class="form-control" placeholder=" " id="dated" />
+                                    <label for="dated">Ngày hiệu lực</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 mature-content">
+                            <label for="">Nội dung</label>
+                            <textarea name="" id="" rows="4"></textarea>
+                        </div>
+                        <div class="col-6">
+                            <table
+                                class="table table-bordered table-hover table-striped text-center"
+                                style="font-size: 13px"
+                            >
+                                <thead>
+                                    <tr class="row">
+                                        <th class="col">Mã định danh</th>
+                                        <th class="col">Họ tên</th>
+                                        <th class="col">Ngày vào đoàn</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="mem-will-mature">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                        <button type="button" class="btn btn-success" id="downloadButton">Tải file mẫu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/componentLoader.js"></script>
+        <script src="../js/mature.js"></script>
+    </body>
+</html>
