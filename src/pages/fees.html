@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý đoàn phí</title>
+
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/GobalStyle.css">
+    <link rel="stylesheet" href="../styles/Fees.css">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="navbar"></div>
+
+    <main>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mt-2">
+                            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Quản lý đoàn phí</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="management-section mb-4">
+
+                    <div class="col-12 mb-2">
+                        <div class="management-header">
+                            <div class="search-box">
+                                <input type="search" class="form-control" id="search-input" placeholder="Tìm kiếm...">
+                            </div>
+                            <div class="button-action">
+                                <button class="btn btn-primary" id="add-btn"> Thêm mới </button>
+
+                                <div class="btn btn-light" id="filter-btn">
+                                    <img src="../assets/images/filters.svg" alt="filters icon">
+
+                                    <div id="filter-box" class="filter-box">
+                                        <div class="mb-2">
+                                            <label for="filter-by" class="form-label">Lọc theo</label>
+                                            <select id="filter-by" class="form-select">
+                                                <option value="nguoiThu">Người thu</option>
+                                                <option value="tongThu">Tổng tiền</option>
+                                                <option value="ngayThu">Ngày thu</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="filter-value" class="form-label">Là</label>
+                                            <input type="search" class="form-control" id="filter-value"
+                                                placeholder="Nhập từ cần tìm">
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <button class="btn btn-light">Hủy</button>
+                                            <button class="btn btn-primary" id="add-filter">Thêm điều kiện lọc</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-light" id="export-btn"> Xuất excel </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="management-container">
+                            <div class="table-responsive">
+                                <table class="table" id="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" data-sort="id">
+                                                STT
+                                                <i class="fa fa-sort sort-icon"></i>
+                                            </th>
+                                            <th scope="col" data-sort="nguoiThu">
+                                                Người thu
+                                                <i class="fa fa-sort sort-icon"></i>
+                                            </th>
+                                            <th scope="col"> Nội dung </th>
+                                            <th scope="col" data-sort="tongThu">
+                                                Tổng thu
+                                                <i class="fa fa-sort sort-icon"></i>
+                                            </th>
+                                            <th scope="col" data-sort="ngayThu">
+                                                Ngày thu
+                                                <i class="fa fa-sort sort-icon"></i>
+                                            </th>
+                                            <th scope="col"> Thao tác </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Data rows will be inserted here via JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="pagination-section">
+                                <div class="pagination-info" id="pagination-info"></div>
+                                <div class="pagination-navigation">
+                                    <nav aria-label="Page navigation">
+                                        <ul class="pagination" id="pagination">
+                                            <!-- Pagination items will be inserted here via JavaScript -->
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal thêm, sửa -->
+    <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="addModalLabel">Thu phí đoàn viên</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="myForm" novalidate>
+                        <div class="form-group">
+                            <label for="collecter-name" class="col-form-label">Người thu:</label>
+                            <input type="text" class="form-control" id="collecter-name" required>
+                            <div class="invalid-feedback">Vui lòng nhập người thu.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="total-amount" class="col-form-label">Tổng số tiền:</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="total-amount" required>
+                                <span class="input-group-text">₫</span>
+                                <div class="invalid-feedback">Vui lòng nhập tổng số tiền hợp lệ.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date" class="col-form-label">Ngày thu:</label>
+                            <input type="date" class="form-control" id="date" required>
+                            <div class="invalid-feedback">Vui lòng chọn ngày thu.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message-textarea" class="col-form-label">Nội dung:</label>
+                            <textarea class="form-control" id="message-textarea" required></textarea>
+                            <div class="invalid-feedback">Vui lòng nhập nội dung.</div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary" id="save-btn">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal xác nhận xóa -->
+    <div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteConfirmLabel">Xác nhận xóa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bạn có chắc chắn muốn xóa mục này?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteButton">Xóa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../node_modules/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/fees.js"></script>
+
+    <!-- Xử lý cho fillter box -->
+    <script>
+        $(document).ready(function () {
+            // Bắt sự kiện click trên document
+            $(document).click(function (event) {
+                // Kiểm tra xem phần tử được nhấp có phải là .filter-box hay không
+                if (!$(event.target).closest('.filter-box').length && !$(event.target).is('#filter-btn')) {
+                    // Nếu không phải là .filter-box và không phải là #filter-btn, ẩn .filter-box
+                    $('.filter-box').hide();
+                }
+            });
+
+            // Bắt sự kiện click trên nút filter để hiển thị hoặc ẩn .filter-box
+            $('#filter-btn').click(function (event) {
+                event.stopPropagation(); // Ngăn chặn sự kiện click từ lan ra document
+                $('.filter-box').toggle();
+            });
+
+            // Ngăn chặn sự kiện click trên .filter-box từ lan ra document
+            $('.filter-box').click(function (event) {
+                event.stopPropagation();
+            });
+
+            $('.filter-box').on('click', '.btn-light', function () {
+                $('.filter-box').hide();
+            });
+        });
+
+    </script>
+</body>
+
+</html>

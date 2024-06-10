@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản trị tổ chức</title>
+
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/GobalStyle.css">
+    <link rel="stylesheet" href="../styles/Organization.css">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="navbar"></div>
+
+    <main>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mt-2">
+                            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Quản trị tổ chức</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="col-12">
+                    <div class="wrapper">
+                        <div class="management-header">
+                            <div class="search-box">
+                                <input type="search" class="form-control" id="search-input" placeholder="Tìm kiếm...">
+                            </div>
+                            <div class="button-action">
+                                <button class="btn btn-primary" id="add-btn"> Thêm mới </button>
+
+                                <div class="filter-btn btn btn-light">
+                                    <img src="../assets/images/filters.svg" alt="filters icon">
+
+                                    <div id="filter-box" class="filter-box">
+                                        <div class="mb-2">
+                                            <label for="filter-by" class="form-label">Lọc theo</label>
+                                            <select id="filter-by" class="form-select">
+                                                <option value="maDoan">Mã chi đoàn</option>
+                                                <option value="tenDoan">Tên chi đoàn</option>
+                                                <option value="nghanhHoc">Nghành học</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="filter-value" class="form-label">Là</label>
+                                            <input type="search" class="form-control" id="filter-value"
+                                                placeholder="Nhập từ cần tìm">
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <button class="btn btn-light">Hủy</button>
+                                            <button class="btn btn-primary" id="add-filter">Thêm điều kiện
+                                                lọc</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-light" id="export-btn"> Xuất excel </button>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table" id="data-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" data-sort="id">
+                                            STT
+                                            <i class="fa fa-sort sort-icon"></i>
+                                        </th>
+                                        <th scope="col" data-sort="maDoan">
+                                            Mã chi đoàn
+                                            <i class="fa fa-sort sort-icon"></i>
+                                        </th>
+                                        <th scope="col" data-sort="tenDoan">
+                                            Tên chi đoàn
+                                            <i class="fa fa-sort sort-icon"></i>
+                                        </th>
+                                        <th scope="col">
+                                            Tên đoàn cơ sở
+                                        </th>
+                                        <th scope="col" data-sort="nghanhHoc">
+                                            Ngành học
+                                            <i class="fa fa-sort sort-icon"></i>
+                                        </th>
+                                        <th scope="col"> Thao tác </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Data rows will be inserted here via JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="pagination-section">
+                            <div class="pagination-info" id="pagination-info"></div>
+                            <div class="pagination-navigation">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination" id="pagination">
+                                        <!-- Pagination items will be inserted here via JavaScript -->
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal thêm, sửa đoàn cơ sở -->
+    <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="addModalLabel">Đoàn cơ sở</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="myForm" novalidate>
+                        <div class="form-group">
+                            <label for="maDoan" class="col-form-label">Mã chi đoàn:</label>
+                            <input type="text" class="form-control" id="maDoan" required>
+                            <div class="invalid-feedback">Vui lòng nhập mã chi đoàn.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tenDoan" class="col-form-label">Tên chi đoàn:</label>
+                            <input type="text" class="form-control" id="tenDoan" required>
+                            <div class="invalid-feedback">Vui lòng nhập tên chi đoàn.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="nghanhHoc" class="col-form-label">Nghành học:</label>
+                            <select id="nghanhHoc" class="form-select">
+                                <option value="Công nghệ thông tin">Công nghệ thông tin</option>
+                                <option value="Hệ thống thông tin">Hệ thống thông tin</option>
+                                <option value="Công nghệ đa phương tiện">Công nghệ đa phương tiện</option>
+                                <option value="Kỹ thuật phần mềm">Kỹ thuật phần mềm</option>
+                                <option value="Khoa học máy tính">Khoa học máy tính</option>
+                                <option value="An toàn thông tin">An toàn thông tin</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary" id="save-btn">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal xác nhận xóa -->
+    <div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteConfirmLabel">Xác nhận xóa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bạn có chắc chắn muốn xóa mục này?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteButton">Xóa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../node_modules/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/organization.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Bắt sự kiện click trên document
+            $(document).click(function (event) {
+                // Kiểm tra xem phần tử được nhấp có phải là .filter-box hay không
+                if (!$(event.target).closest('.filter-box').length && !$(event.target).is('.filter-btn')) {
+                    // Nếu không phải là .filter-box và không phải là #filter-btn, ẩn .filter-box
+                    $('.filter-box').hide();
+                }
+            });
+
+            // Bắt sự kiện click trên nút filter để hiển thị hoặc ẩn .filter-box
+            $('.filter-btn').click(function (event) {
+                event.stopPropagation(); // Ngăn chặn sự kiện click từ lan ra document
+                $('.filter-box').toggle();
+            });
+
+            // Ngăn chặn sự kiện click trên .filter-box từ lan ra document
+            $('.filter-box').click(function (event) {
+                event.stopPropagation();
+            });
+
+            $('.filter-box').on('click', '.btn-light', function () {
+                $('.filter-box').hide();
+            });
+        });
+
+    </script>
+</body>
+
+</html>
