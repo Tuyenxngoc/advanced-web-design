@@ -1,0 +1,34 @@
+{
+    "members": [
+        {
+            "id": "2021607794",
+            "fullname": "Đỗ Văn E",
+            "dob": "1998-05-05",
+            "gender": "Nam",
+            "nation": "Kinh",
+            "identification-card": "036203014503",
+            "edu-lvl": "Trung học phổ thông",
+            "eng-lvl": "IELTs 7.0",
+            "qualification": "",
+            "political-theory": "",
+            "cur-job": "student",
+            "major": "Khoa học máy tính",
+            "branch": "HTTT03-K16"
+        },
+        {
+            "id": "2021607794",
+            "fullname": "Đỗ Văn E",
+            "dob": "1998-05-05",
+            "gender": "Nam",
+            "nation": "Kinh",
+            "identification-card": "036203014503",
+            "edu-lvl": "Trung học phổ thông",
+            "eng-lvl": "IELTs 7.0",
+            "qualification": "",
+            "political-theory": "",
+            "cur-job": "student",
+            "major": "Khoa học máy tính",
+            "branch": "HTTT03-K16"
+        }
+    ]
+}
